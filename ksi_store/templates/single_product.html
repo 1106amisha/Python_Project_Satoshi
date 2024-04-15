@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} KSI {% endblock %}
+
+{% block stylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+
+
+	<!--================Single Product Area =================-->
+	<div class="product_image_area">
+		<div class="container">
+			<div class="row s_product_inner">
+				<div class="col-lg-6">
+					<div class="s_Product_carousel">
+						<div class="single-prd-item card-body">
+							<img class="card-body"  src="{{ object_1.img.url }}" alt="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-5 offset-lg-1 banner-content">
+					<div class="s_product_text">
+						<h3>{{ object_1.name }}</h3>
+						<h2>Rs.{{ object_1.price }}</h2>
+						
+						<p>Availibility : In Stock</p>					
+				
+						<div class="card_area d-flex align-items-center">
+							<a><button class="btn btn-primary" id="add_to_cart" data-action="add" onclick="updateuserorder('{{ object_1.id }}')">Add To Cart </button></a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock content %}
+{% block javascripts %}
+
+
+{% endblock javascripts %}
